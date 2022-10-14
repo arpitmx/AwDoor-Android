@@ -1,18 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:weightSum="10"
+    android:background="@drawable/bg"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Welcome to"
+        android:layout_weight="1"
+        android:fontFamily="@font/mregular"
+        android:textColor="@color/high_emphasis"
+        android:textSize="22dp"
+
+        android:gravity="center_horizontal|bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:src="@drawable/log"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:src="@drawable/illus"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Trip Budget Aggregator"
+        android:layout_weight="1"
+        android:fontFamily="@font/pmedium"
+        android:textSize="20dp"
+        android:textColor="@color/high_emphasis"
+        android:gravity="center_horizontal|top"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:text="Your one stop trip budget aggregator"
+        android:layout_weight="1"
+        android:fontFamily="@font/pmedium"
+        android:textSize="16dp"
+        android:textColor="@color/low_emphasis"
+        android:gravity="center_horizontal|top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="230dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:text="Let's Go"
+        android:layout_margin="5dp"
+        android:textColor="@color/high_emphasis"
+        android:textSize="18dp"
+        android:fontFamily="@font/pmedium"
+        android:textAllCaps="false"
+        android:background="@drawable/round_btn"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
