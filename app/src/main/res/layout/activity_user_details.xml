@@ -1,9 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bggg"
     tools:context=".User_Details">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/msemibold"
+        android:gravity="start|top"
+        android:paddingStart="20dp"
+        android:text="Enter your details"
+        android:textColor="@color/high_emphasis"
+        android:textSize="28dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_inp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Name"
+        android:padding="5dp"
+        app:boxStrokeColor="@color/primary_less"
+        app:boxStrokeWidth="2dp"
+        app:hintTextColor="@color/primary_less"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/state_inp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/name_inp"
+        android:layout_marginStart="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginEnd="40dp"
+        android:hint="State"
+        app:hintTextColor="@color/primary_less"
+        app:boxStrokeColor="@color/primary_less"
+        app:boxStrokeWidth="2dp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city_inp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_below="@id/state_inp"
+        android:layout_marginStart="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginEnd="40dp"
+        android:hint="City"
+        app:hintTextColor="@color/primary_less"
+        app:boxStrokeColor="@color/primary_less"
+        app:boxStrokeWidth="2dp"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageView
+        android:id="@+id/girl"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_below="@id/city_inp"
+        android:layout_marginTop="25dp"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/illustwo"
+        android:translationX="50dp"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/begin"
+        android:layout_width="230dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/girl"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/round_btn"
+        android:fontFamily="@font/pmedium"
+        android:transitionName="searchActivityTransition"
+        android:text="Begin"
+        android:textAllCaps="false"
+        android:textColor="@color/high_emphasis"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pmedium"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/begin"
+        android:layout_marginTop="25dp"
+        android:text="Let me handle the job now.. by continuing you accept our terms"
+        android:textColor="@color/low_emphasis"
+        android:textSize="14dp" />
+
+
+</RelativeLayout>

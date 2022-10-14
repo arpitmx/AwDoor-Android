@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AwDoor/app/src/main/res/drawable/outline.xml" value="0.135" />
         <entry key="..\:/AwDoor/app/src/main/res/drawable/round_btn.xml" value="0.135" />
         <entry key="..\:/AwDoor/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AwDoor/app/src/main/res/layout/activity_user_details.xml" value="0.2" />
       </map>
     </option>
   </component>
