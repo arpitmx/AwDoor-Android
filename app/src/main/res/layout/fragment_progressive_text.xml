@@ -1,15 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProgressiveTextLayout.ProgressiveTextFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProgressiveTextLayout.ProgressiveTextFragment"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Trip Details : "
+        android:fontFamily="@font/msemibold"
+        android:textColor="@color/high_emphasis"
+        android:textSize="25dp"
+        android:padding="15dp"
         />
 
-</FrameLayout>
+    <include
+        layout="@layout/progressivebar"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="I am planning to visit "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="bottom"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="23dp"
+
+
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:minWidth="80dp"
+                android:drawableRight="10dp"
+                android:hint="Where ? "
+                android:textColor="@color/primary_less"
+                android:textSize="20dp"
+                android:drawableTint="@color/low_emphasis"
+                android:drawableEnd="@drawable/ic_baseline_location_on_24"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=","
+                android:textSize="20dp"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="bottom"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="on "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="bottom"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="23dp"
+
+
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:minWidth="80dp"
+                android:textColor="@color/primary_less"
+                android:textSize="20dp"
+                android:hint="Date "
+                android:drawableRight="5dp"
+                android:drawableTint="@color/low_emphasis"
+                android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=", for "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="bottom"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="23dp"
+
+
+                />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:textColor="@color/primary_less"
+                android:textSize="20dp"
+                android:minWidth="50dp"
+                android:hint="1-5"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="days ,"
+                android:textSize="20dp"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="bottom"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="it will be a "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="bottom"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="23dp"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                >
+
+                <!-- Inside text input layout add
+                      an auto complete text view
+                        and make its input type to none-->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:textColor="@color/low_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="Group/Solo"
+
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" trip,"
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="bottom"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="23dp"
+
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

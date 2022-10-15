@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    >
+
+ <ImageView
+     android:id="@+id/p1"
+     android:layout_width="40dp"
+     android:layout_height="40dp"
+     android:src="@drawable/ic_do"
+  />
+
+ <View
+     android:id="@+id/l1"
+     android:layout_width="@dimen/ldis"
+     android:layout_height="@dimen/progLine"
+     android:background="@color/un_prog_bg"
+  />
+ <ImageView
+     android:id="@+id/p2"
+     android:layout_width="40dp"
+     android:layout_height="40dp"
+     android:src="@drawable/ic_un"
+     />
+
+ <View
+     android:id="@+id/l2"
+     android:layout_width="@dimen/ldis"
+     android:layout_height="@dimen/progLine"
+     android:background="@color/un_prog_bg"
+     />
+ <ImageView
+     android:id="@+id/p3"
+     android:layout_width="40dp"
+     android:layout_height="40dp"
+     android:src="@drawable/ic_un"
+     />
+
+ <View
+     android:id="@+id/l3"
+     android:layout_width="@dimen/ldis"
+     android:layout_height="@dimen/progLine"
+     android:background="@color/un_prog_bg"
+     />
+ <ImageView
+     android:id="@+id/p4"
+     android:layout_width="40dp"
+     android:layout_height="40dp"
+     android:src="@drawable/ic_un"
+     />
+
+ <View
+     android:id="@+id/l4"
+     android:layout_width="@dimen/ldis"
+     android:layout_height="@dimen/progLine"
+     android:background="@color/un_prog_bg"
+     />
+ <ImageView
+     android:id="@+id/p5"
+     android:layout_width="40dp"
+     android:layout_height="40dp"
+     android:src="@drawable/ic_un"
+     />
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
