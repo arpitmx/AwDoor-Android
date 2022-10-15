@@ -18,7 +18,9 @@
         android:paddingStart="20dp"
         android:text="Enter your details"
         android:textColor="@color/high_emphasis"
-        android:textSize="28dp" />
+        android:textSize="28dp"
+
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_inp"
@@ -42,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-
+            android:focusable="true"
+            android:singleLine="true"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -50,17 +53,17 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/state_inp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:padding="5dp"
         android:layout_below="@id/name_inp"
         android:layout_marginStart="20dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginEnd="40dp"
         android:hint="State"
-        app:hintTextColor="@color/primary_less"
+        android:padding="5dp"
         app:boxStrokeColor="@color/primary_less"
         app:boxStrokeWidth="2dp"
+        app:hintTextColor="@color/primary_less"
 
         >
 
@@ -69,7 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-
+            android:singleLine="true"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -95,6 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/black"
+            android:singleLine="true"
 
             />
 
@@ -111,6 +115,7 @@
         android:scaleY="1.1"
         android:src="@drawable/illustwo"
         android:translationX="50dp"
+        android:transitionName="searchActivityTransition"
 
         />
 
@@ -126,10 +131,10 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/round_btn"
         android:fontFamily="@font/pmedium"
-        android:transitionName="searchActivityTransition"
         android:text="Begin"
         android:textAllCaps="false"
         android:textColor="@color/high_emphasis"
+
         android:textSize="18dp" />
 
     <TextView

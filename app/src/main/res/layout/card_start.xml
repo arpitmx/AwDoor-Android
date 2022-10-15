@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="1dp"
+    android:id="@+id/card"
+        >
+        <TextView
+            android:id="@+id/uname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/pmedium"
+            android:gravity="start|top"
+            android:paddingStart="20dp"
+            android:text="Hey User,"
+            android:textColor="@color/high_emphasis"
+            android:textSize="28dp"
+
+            />
+
+        <TextView
+            android:id="@+id/t"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/pmedium"
+            android:gravity="start|top"
+            android:outlineSpotShadowColor="@color/low_emphasis"
+            android:paddingStart="20dp"
+            android:text="Are you thinking about a trip ?\nStart here.."
+            android:textSize="20dp"
+            android:padding="10dp"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="60dp"
+            android:layout_below="@id/girl"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="start"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/pmedium"
+            android:text="Let's start"
+            android:textAllCaps="false"
+            android:textColor="@color/high_emphasis"
+
+            android:textSize="18dp" />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardview_shadow_end_color"
+    tools:context=".TripDetails">
+
+    <include
+        android:id="@+id/start_card"
+        layout="@layout/card_start"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/prog_card"
+        layout="@layout/progressive_text_layout"
+        android:visibility="gone"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
