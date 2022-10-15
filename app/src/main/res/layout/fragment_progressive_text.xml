@@ -198,6 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:inputType="none"
+                    android:minWidth="100dp"
                     android:layout_weight="1"
                     android:textColor="@color/high_emphasis"
                     android:fontFamily="@font/msemibold"
@@ -261,6 +262,7 @@
                 android:fontFamily="@font/msemibold"
                 android:singleLine="true"
                 android:id="@+id/noofpeople"
+                android:inputType="number"
                 />
             <TextView
                 android:layout_width="wrap_content"
