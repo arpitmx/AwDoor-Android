@@ -31,6 +31,7 @@ import java.util.*
      lateinit var nodays : String
      lateinit var tripType : String
      lateinit var transport : String
+     lateinit var noOfpeople : String
 
 
     override fun onCreateView(
@@ -102,8 +103,72 @@ import java.util.*
      override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
          super.onViewCreated(view, savedInstanceState)
 
+        binding.next.setOnClickListener{
+            var tempDestination = binding.destination.text.toString().trim()
+            if(!tempDestination.equals("")){
+
+                binding.detail2.visibility = View.VISIBLE
+                binding.detail1.alpha = 0.5f
+                destination = tempDestination
+
+                binding.b.p1.setImageResource(R.drawable.ic_se)
+                binding.b.l1.setBackgroundColor(resources.getColor(R.color.primary))
+                binding.b.p2.setImageResource(R.drawable.ic_do)
+
+                if (!binding.noofdays.toString().trim().equals("") && !binding.dateInp.text.toString().trim().equals("") ){
+
+                    binding.detail3.visibility = View.VISIBLE
+                    binding.detail2.alpha = 0.5f
+                    nodays= binding.noofdays.toString().trim()
+
+                    binding.b.p2.setImageResource(R.drawable.ic_se)
+                    binding.b.l2.setBackgroundColor(resources.getColor(R.color.primary))
+                    binding.b.p3.setImageResource(R.drawable.ic_do)
 
 
+
+
+                }else {
+                    Toast.makeText(requireContext(),"Some field still left", Toast.LENGTH_SHORT).show()
+                }
+
+
+            }else {
+                binding.destination.error = "Empty"
+            }
+        }
+
+
+
+     }
+
+
+
+     fun handleGroupType(){
+         if(!binding.autoCompleteTextView.toString().trim().equals("") ){
+             tripType = binding.autoCompleteTextView.toString().trim()
+
+             var group = false
+             if (tripType == "group"){
+                 group = true
+                 binding.detail45.visibility = View.VISIBLE
+             }
+             if (group && !binding.noofpeople.toString().trim().equals("") || !group){
+
+                 noOfpeople = binding.noofpeople.toString().trim()
+                 binding.b.p3.setImageResource(R.drawable.ic_se)
+                 binding.b.l3.setBackgroundColor(resources.getColor(R.color.primary))
+                 binding.b.p4.setImageResource(R.drawable.ic_do)
+
+                 binding.detail4.visibility = View.VISIBLE
+                 binding.detail3.alpha = 0.5f
+                 binding.detail45.alpha = 0.5f
+
+             }
+
+         }else {
+             binding.autoCompleteTextView.error = "Empty"
+         }
      }
 
      override fun onAttach(context: Context) {

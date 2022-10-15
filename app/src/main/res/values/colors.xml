@@ -12,4 +12,5 @@
     <color name="primary_less">#FF9680</color>
     <color name="border">#6B737A</color>
     <color name="un_prog_bg">#D1D5DB</color>
+    <color name="primary">#FF5733</color>
 </resources>

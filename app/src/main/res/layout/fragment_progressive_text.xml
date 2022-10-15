@@ -22,6 +22,7 @@
 
     <include
         layout="@layout/progressivebar"
+        android:id="@+id/b"
 
         />
 
@@ -58,11 +59,12 @@
 
 
                 />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:hint="Where?"
+                android:hint="here"
                 android:textColor="@color/primary_less"
                 android:textSize="@dimen/progtvsize"
                 android:drawableTint="@color/low_emphasis"
@@ -70,6 +72,7 @@
                 android:drawableEnd="@drawable/ic_baseline_location_on_24"
                 android:fontFamily="@font/msemibold"
                 android:singleLine="true"
+                android:id="@+id/destination"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -89,6 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:visibility="gone"
 
             >
             <TextView
@@ -132,6 +136,7 @@
 
                 />
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/noofdays"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/primary_less"
@@ -160,6 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:visibility="gone"
 
             >
             <TextView
@@ -204,19 +210,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:textColor="@color/primary_less"
-                android:textSize="@dimen/progtvsize"
-                android:hint="N?"
-                android:paddingTop="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:inputType="number"
-                android:fontFamily="@font/msemibold"
-                android:singleLine="true"
-                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -233,13 +226,63 @@
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail45"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="and"
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="people"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:drawableTint="@color/low_emphasis"
+                android:paddingBottom="9dp"
+                android:drawableEnd="@drawable/ic_baseline_people_alt_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                android:id="@+id/noofpeople"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" will be joining me.."
+                android:textSize="20dp"
+                android:textColor="@color/high_emphasis"
+                android:fontFamily="@font/msemibold"
+                android:gravity="center"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/detail4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-
+            android:visibility="gone"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -302,6 +345,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:visibility="gone"
 
             >
             <TextView
@@ -365,6 +409,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:visibility="gone"
 
             >
             <TextView
@@ -414,6 +459,15 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/curvedbggray"
+        android:src="@drawable/ic_baseline_keyboard_return_24"
+        android:elevation="5dp"
+        app:tint="@color/primary_less" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
