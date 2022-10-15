@@ -2,4 +2,5 @@
 <resources>
     <dimen name="progLine">3dp</dimen>
     <dimen name="ldis">45dp</dimen>
+    <dimen name="progtvsize">20dp</dimen>
 </resources>

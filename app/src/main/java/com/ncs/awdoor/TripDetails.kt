@@ -40,7 +40,7 @@ class TripDetails : AppCompatActivity() {
             binding.startCard.card.startAnimation(out)
             Handler(Looper.getMainLooper()).postDelayed({
                 binding.startCard.card.visibility = View.GONE
-                binding.progCard.progressiveCard.visibility = View.VISIBLE
+                binding.progressiveFrameContainer.visibility= View.VISIBLE
             },200)
         }
 

@@ -5,29 +5,38 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProgressiveTextLayout.ProgressiveTextFragment"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trip Details : "
+        android:text="Trip Details"
         android:fontFamily="@font/msemibold"
         android:textColor="@color/high_emphasis"
         android:textSize="25dp"
+        android:textStyle="bold"
+        android:background="@color/white"
         android:padding="15dp"
         />
 
     <include
         layout="@layout/progressivebar"
+
         />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/curvedbggraytv"
+        android:elevation="1dp"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
         >
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/detail1"
@@ -42,23 +51,22 @@
                 android:text="I am planning to visit "
                 android:fontFamily="@font/msemibold"
                 android:paddingBottom="2dp"
-                android:gravity="bottom"
+                android:gravity="center"
                 android:paddingStart="5dp"
                 android:textColor="@color/high_emphasis"
-                android:textSize="23dp"
+                android:textSize="@dimen/progtvsize"
 
 
                 />
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:minWidth="80dp"
-                android:drawableRight="10dp"
-                android:hint="Where ? "
+                android:gravity="center"
+                android:hint="Where?"
                 android:textColor="@color/primary_less"
-                android:textSize="20dp"
+                android:textSize="@dimen/progtvsize"
                 android:drawableTint="@color/low_emphasis"
+                android:paddingBottom="9dp"
                 android:drawableEnd="@drawable/ic_baseline_location_on_24"
                 android:fontFamily="@font/msemibold"
                 android:singleLine="true"
@@ -89,22 +97,21 @@
                 android:text="on "
                 android:fontFamily="@font/msemibold"
                 android:paddingBottom="2dp"
-                android:gravity="bottom"
+                android:gravity="center"
                 android:paddingStart="5dp"
                 android:textColor="@color/high_emphasis"
-                android:textSize="23dp"
-
-
+                android:textSize="@dimen/progtvsize"
                 />
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
+                android:id="@+id/date_inp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="bottom"
-                android:minWidth="80dp"
+                android:gravity="center"
+                android:clickable="false"
                 android:textColor="@color/primary_less"
-                android:textSize="20dp"
-                android:hint="Date "
-                android:drawableRight="5dp"
+                android:textSize="@dimen/progtvsize"
+                android:drawablePadding="8dp"
+
                 android:drawableTint="@color/low_emphasis"
                 android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
                 android:fontFamily="@font/msemibold"
@@ -117,21 +124,21 @@
                 android:text=", for "
                 android:fontFamily="@font/msemibold"
                 android:paddingBottom="2dp"
-                android:gravity="bottom"
+                android:gravity="center"
                 android:paddingStart="5dp"
                 android:textColor="@color/high_emphasis"
-                android:textSize="23dp"
+                android:textSize="@dimen/progtvsize"
 
 
                 />
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="bottom"
                 android:textColor="@color/primary_less"
-                android:textSize="20dp"
-                android:minWidth="50dp"
-                android:hint="1-5"
+                android:textSize="@dimen/progtvsize"
+                android:hint=" N "
+                android:paddingTop="5dp"
+                android:inputType="number"
                 android:fontFamily="@font/msemibold"
                 android:singleLine="true"
                 />
@@ -139,10 +146,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="days ,"
-                android:textSize="20dp"
+                android:textSize="@dimen/progtvsize"
                 android:textColor="@color/high_emphasis"
                 android:fontFamily="@font/msemibold"
-                android:gravity="bottom"
+                android:gravity="center"
                 />
 
 
@@ -161,10 +168,89 @@
                 android:text="it will be a "
                 android:fontFamily="@font/msemibold"
                 android:paddingBottom="2dp"
-                android:gravity="bottom"
+                android:gravity="center"
                 android:paddingStart="5dp"
                 android:textColor="@color/high_emphasis"
-                android:textSize="23dp"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                android:id="@+id/kiki"
+                >
+
+                <!-- Inside text input layout add
+                      an auto complete text view
+                        and make its input type to none-->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="Group/Solo"
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/primary_less"
+                android:textSize="@dimen/progtvsize"
+                android:hint="N?"
+                android:paddingTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:inputType="number"
+                android:fontFamily="@font/msemibold"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="trip,"
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="will be taking "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
 
 
                 />
@@ -176,38 +262,155 @@
                 android:layout_marginTop="5dp"
                 >
 
-                <!-- Inside text input layout add
-                      an auto complete text view
-                        and make its input type to none-->
                 <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
+                    android:id="@+id/transportView"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:inputType="none"
-                    android:textColor="@color/low_emphasis"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
                     android:fontFamily="@font/msemibold"
-                    android:text="Group/Solo"
+                    android:text="Transport"
 
                     />
 
 
 
+
             </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text=" trip,"
+                android:text="mode."
                 android:fontFamily="@font/msemibold"
                 android:paddingBottom="2dp"
-                android:gravity="bottom"
+                android:gravity="center"
                 android:paddingStart="5dp"
                 android:textColor="@color/high_emphasis"
-                android:textSize="23dp"
+                android:textSize="@dimen/progtvsize"
 
 
                 />
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="and "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/hotelwill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="will/will not"
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="be staying in.."
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="@dimen/progtvsize"
+
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/detail6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="hotel and hotel must be "
+                android:fontFamily="@font/msemibold"
+                android:paddingBottom="2dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:textColor="@color/high_emphasis"
+                android:textSize="18dp"
+
+
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/primary_less"
+                android:layout_marginTop="5dp"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/hotelstars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:layout_weight="1"
+                    android:textColor="@color/high_emphasis"
+                    android:fontFamily="@font/msemibold"
+                    android:text="stars"
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

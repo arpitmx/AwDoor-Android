@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AwDoor/app/src/main/res/drawable/curvedbggray.xml" value="0.135" />
+        <entry key="..\:/AwDoor/app/src/main/res/drawable/curvedbggraytv.xml" value="0.135" />
         <entry key="..\:/AwDoor/app/src/main/res/drawable/outline.xml" value="0.135" />
         <entry key="..\:/AwDoor/app/src/main/res/drawable/round_btn.xml" value="0.135" />
         <entry key="..\:/AwDoor/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -12,7 +14,7 @@
         <entry key="..\:/AwDoor/app/src/main/res/layout/drop_down_item.xml" value="0.24270833333333333" />
         <entry key="..\:/AwDoor/app/src/main/res/layout/fragment_progressive_text.xml" value="0.264" />
         <entry key="..\:/AwDoor/app/src/main/res/layout/progressive_text_layout.xml" value="0.2" />
-        <entry key="..\:/AwDoor/app/src/main/res/layout/progressivebar.xml" value="0.2" />
+        <entry key="..\:/AwDoor/app/src/main/res/layout/progressivebar.xml" value="0.264" />
       </map>
     </option>
   </component>

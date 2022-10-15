@@ -14,10 +14,18 @@
         android:visibility="gone"
         />
 
-    <include
-        android:id="@+id/prog_card"
-        layout="@layout/progressive_text_layout"
+<!--    <include-->
+<!--        android:id="@+id/prog_card"-->
+<!--        layout="@layout/progressive_text_layout"-->
+<!--        android:visibility="gone"-->
+<!--        />-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/progressive_FrameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:visibility="gone"
+        android:name="com.ncs.awdoor.ProgressiveTextLayout.ProgressiveTextFragment"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
