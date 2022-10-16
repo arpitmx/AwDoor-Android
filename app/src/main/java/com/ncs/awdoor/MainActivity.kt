@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityMainBinding
     lateinit var sharedPref : SharedPreferences
-    lateinit var editor : SharedPreferences.Editor
 
 
     public fun actionSearchFrag(item : View){

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/busTypeCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_flight_takeoff_24"
+                android:drawableTint="@color/primary"
+                android:fontFamily="@font/msemibold"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:text="Transport"
+                android:paddingTop="5dp"
+                android:textColor="@color/primary"
+                android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pregular"
+            android:gravity="start"
+            android:paddingStart="15dp"
+            android:layout_marginTop="5dp"
+            android:text="Transport type : Bus"
+            android:textColor="@color/high_emphasis"
+            android:textSize="15dp"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Name : Shakti Travels"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/busType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Specification : Non AC Seater"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/boadingStation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Boarding station : Dhaula Kuan"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/endStation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Terminating station : Narayan Singh Circle"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Rate : Rs. 400"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundbtnn"
+                android:text="Book now"
+                android:fontFamily="@font/msemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flightTypeCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_flight_takeoff_24"
+                android:drawableTint="@color/primary"
+                android:fontFamily="@font/msemibold"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:text="Transport"
+                android:paddingTop="5dp"
+                android:textColor="@color/primary"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/typeFlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Transport type : Flight"
+                android:textColor="@color/high_emphasis"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/flightName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Flight name : Air Asia"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/depDateFlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Departure date : 2022-11-16"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/flightprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Rate : Rs. 3,400"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundbtnn"
+                android:text="Book now"
+                android:fontFamily="@font/msemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/trainTypeCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_flight_takeoff_24"
+                android:drawableTint="@color/primary"
+                android:fontFamily="@font/msemibold"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:text="Transport"
+                android:paddingTop="5dp"
+                android:textColor="@color/primary"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/typeTrain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Transport type : Train"
+                android:textColor="@color/high_emphasis"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/trainName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Train name : NDLS Express"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/trainNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Train No. : 192039"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/boardingStationTrain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Boarding station : H Nizammudin"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/deboardStationTrain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Deboard station : Bandra Terminus"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/departDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Depart Date : 2022-10-20"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+            <TextView
+                android:id="@+id/arrivalDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Arrival Date : 2022-10-21"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/departTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Depart time : 18:55:00"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+
+            <TextView
+                android:id="@+id/arrivalTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Arrival time : 18:55:00"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundbtnn"
+                android:text="Book now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/msemibold"
+
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

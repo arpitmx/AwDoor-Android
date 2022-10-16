@@ -2,6 +2,7 @@
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -32,14 +33,16 @@ import kotlin.properties.Delegates
     private val binding get()  = _binding!!
     lateinit var arrayAdapter :ArrayAdapter<String?>
 
-     lateinit var date: String
-     lateinit var destination : String
-     lateinit var nodays : String
+     var date: String = "18/10/2022"
+      var destination : String = "Kasol"
+      var start : String = "Delhi"
+     lateinit var pref : SharedPreferences
+      var nodays : String = "5"
      var tripType : Int = -1
      var transport : Int = -1
      var willing : Int = -1
      var stars : Int = -1
-     lateinit var noOfpeople : String
+     var noOfpeople : String = "5"
 
 
     override fun onCreateView(
@@ -48,10 +51,11 @@ import kotlin.properties.Delegates
     ): View {
 
         _binding = FragmentProgressiveTextBinding.inflate(inflater,container,false)
-
-
         binding.nextintent.setOnClickListener(this)
 
+
+        pref = requireContext().getSharedPreferences("UserDetailPref", Context.MODE_PRIVATE)
+        start = pref.getString("city",null).toString()
 
         val languages = resources.getStringArray(R.array.triptype)
         arrayAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item , languages)
@@ -276,7 +280,15 @@ import kotlin.properties.Delegates
      }
 
      override fun onClick(p0: View?) {
-         startActivity(Intent(context, FinalActivity::class.java ))
+         var i = Intent(context, FinalActivity::class.java )
+         i.putExtra("tripMode",tripType)
+         i.putExtra("start",start)
+         i.putExtra("dest",destination)
+         i.putExtra("date",date)
+         i.putExtra("people",noOfpeople)
+         i.putExtra("days",nodays)
+         startActivity(i)
+
      }
 
  }
