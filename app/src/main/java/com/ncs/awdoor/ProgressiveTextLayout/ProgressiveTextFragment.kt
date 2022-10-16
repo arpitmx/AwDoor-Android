@@ -50,7 +50,7 @@ import kotlin.properties.Delegates
         _binding = FragmentProgressiveTextBinding.inflate(inflater,container,false)
 
 
-        binding.next.setOnClickListener(this)
+        binding.nextintent.setOnClickListener(this)
 
 
         val languages = resources.getStringArray(R.array.triptype)

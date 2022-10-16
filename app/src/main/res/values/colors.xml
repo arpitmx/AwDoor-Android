@@ -13,4 +13,6 @@
     <color name="border">#6B737A</color>
     <color name="un_prog_bg">#D1D5DB</color>
     <color name="primary">#FF5733</color>
+    <color name="loading">#FEB81B</color>
+    <color name="status">#DBE0E7</color>
 </resources>
