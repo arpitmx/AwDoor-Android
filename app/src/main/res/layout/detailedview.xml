@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
+        android:visibility="visible"
         >
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -47,6 +48,7 @@
             />
 
             <TextView
+                android:id="@+id/busCompany"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pregular"
@@ -59,7 +61,7 @@
                 />
 
             <TextView
-                android:id="@+id/busType"
+                android:id="@+id/busSpecs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pregular"
@@ -72,7 +74,7 @@
                 />
 
             <TextView
-                android:id="@+id/boadingStation"
+                android:id="@+id/boadingStationBus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pregular"
@@ -85,7 +87,7 @@
                 />
 
             <TextView
-                android:id="@+id/endStation"
+                android:id="@+id/endStationBus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pregular"
@@ -98,14 +100,14 @@
                 />
 
             <TextView
-                android:id="@+id/price"
+                android:id="@+id/priceBus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pregular"
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Rate : Rs. 400"
+                android:text="Rate : Rs. 2250"
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -136,6 +138,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
+        android:visibility="gone"
         >
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -212,6 +215,7 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/flightBookBtn"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="70dp"
@@ -236,6 +240,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
+        android:visibility="gone"
         >
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -280,7 +285,7 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Train name : NDLS Express"
+                android:text="Train name : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -293,7 +298,7 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Train No. : 192039"
+                android:text="Train No. : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -306,7 +311,7 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Boarding station : H Nizammudin"
+                android:text="Boarding station : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -319,7 +324,7 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Deboard station : Bandra Terminus"
+                android:text="Deboard station : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -332,7 +337,7 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Depart Date : 2022-10-20"
+                android:text="Depart Date : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -344,7 +349,7 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Arrival Date : 2022-10-21"
+                android:text="Arrival Date : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -357,7 +362,7 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Depart time : 18:55:00"
+                android:text="Depart time : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -371,7 +376,20 @@
                 android:gravity="start"
                 android:paddingStart="15dp"
                 android:layout_marginTop="5dp"
-                android:text="Arrival time : 18:55:00"
+                android:text="Arrival time : "
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/trainPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Rate : "
                 android:textColor="@color/low_emphasis"
                 android:textSize="12dp"
                 />
@@ -399,4 +417,290 @@
     </androidx.cardview.widget.CardView>
 
 
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/HotelCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_hotel_24"
+                android:drawableTint="@color/primary"
+                android:fontFamily="@font/msemibold"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:text="Hotel"
+                android:paddingTop="5dp"
+                android:textColor="@color/primary"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/hotelStars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Hotel type : 2 Star"
+                android:textColor="@color/high_emphasis"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Hotel name : Srinivasa Hotel, Rajasthan"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/hotelTypeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Entering date : 2022-11-16"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/hotelRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Rate : Rs. 1,510"
+                android:textColor="@color/low_emphasis"
+                android:textSize="12dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundbtnn"
+                android:text="Book now"
+                android:fontFamily="@font/msemibold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/foodTypeCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_fastfood_24"
+                android:drawableTint="@color/primary"
+                android:fontFamily="@font/msemibold"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:text="Food"
+                android:paddingTop="5dp"
+                android:textColor="@color/primary"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/typeFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Food type : Nominal"
+                android:textColor="@color/high_emphasis"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/typeFooodPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pregular"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Price : 500rs"
+                android:textColor="@color/high_emphasis"
+                android:textSize="15dp"
+                />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+<!--<TextView-->
+<!--android:id="@+id/trainName"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Train name : NDLS Express"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+
+<!--<TextView-->
+<!--android:id="@+id/trainNumber"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Train No. : 192039"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+
+<!--<TextView-->
+<!--android:id="@+id/boardingStationTrain"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Boarding station : H Nizammudin"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+
+<!--<TextView-->
+<!--android:id="@+id/deboardStationTrain"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Deboard station : Bandra Terminus"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+
+<!--<TextView-->
+<!--android:id="@+id/departDate"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Depart Date : 2022-10-20"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+<!--<TextView-->
+<!--android:id="@+id/arrivalDate"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Arrival Date : 2022-10-21"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+
+<!--<TextView-->
+<!--android:id="@+id/departTime"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Depart time : 18:55:00"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+
+
+<!--<TextView-->
+<!--android:id="@+id/arrivalTime"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:fontFamily="@font/pregular"-->
+<!--android:gravity="start"-->
+<!--android:paddingStart="15dp"-->
+<!--android:layout_marginTop="5dp"-->
+<!--android:text="Arrival time : 18:55:00"-->
+<!--android:textColor="@color/low_emphasis"-->
+<!--android:textSize="12dp"-->
+<!--    />-->
+
+<!--<androidx.appcompat.widget.AppCompatButton-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="40dp"-->
+<!--android:layout_marginStart="70dp"-->
+<!--android:layout_marginEnd="70dp"-->
+<!--android:layout_marginTop="20dp"-->
+<!--android:background="@drawable/roundbtnn"-->
+<!--android:text="Book now"-->
+<!--android:textAllCaps="false"-->
+<!--android:textColor="@color/white"-->
+<!--android:layout_marginBottom="10dp"-->
+<!--android:fontFamily="@font/msemibold"-->
+
+<!--    />-->

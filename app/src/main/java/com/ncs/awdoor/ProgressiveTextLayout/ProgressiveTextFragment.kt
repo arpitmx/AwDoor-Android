@@ -33,16 +33,18 @@ import kotlin.properties.Delegates
     private val binding get()  = _binding!!
     lateinit var arrayAdapter :ArrayAdapter<String?>
 
-     var date: String = "18/10/2022"
+     var date: String = "22/10/2022"
       var destination : String = "Kasol"
       var start : String = "Delhi"
      lateinit var pref : SharedPreferences
-      var nodays : String = "5"
-     var tripType : Int = -1
-     var transport : Int = -1
+      var nodays : String = "3"
+
+     // TODO: Change thses
+     var tripType : Int = 1
+     var transport : Int = 2
      var willing : Int = -1
-     var stars : Int = -1
-     var noOfpeople : String = "5"
+     var stars : Int = 2
+     var noOfpeople : String = "2"
 
 
     override fun onCreateView(
@@ -281,12 +283,14 @@ import kotlin.properties.Delegates
 
      override fun onClick(p0: View?) {
          var i = Intent(context, FinalActivity::class.java )
-         i.putExtra("tripMode",tripType)
+         i.putExtra("tripType",tripType)
          i.putExtra("start",start)
          i.putExtra("dest",destination)
          i.putExtra("date",date)
          i.putExtra("people",noOfpeople)
          i.putExtra("days",nodays)
+         i.putExtra("transp",transport)
+         i.putExtra("stars",stars)
          startActivity(i)
 
      }

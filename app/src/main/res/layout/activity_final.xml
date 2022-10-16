@@ -47,21 +47,29 @@
                 android:layout_margin="10dp"
 
                 >
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/locImg"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/fade"
                         android:background="@drawable/des"
-
+                        android:scaleType="centerCrop"
                         />
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@drawable/fade"
+                        app:layout_constraintBottom_toBottomOf="@+id/locImg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
 
                     <TextView
 
@@ -98,12 +106,13 @@
 
 
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearLayoutCompat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/locImg"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.82">
 
@@ -117,7 +126,7 @@
                             android:gravity="center_vertical"
                             android:text="5 days"
                             android:textColor="@color/white"
-                            android:textSize="12dp"
+                            android:textSize="18dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="@+id/imageView"
                             app:layout_constraintTop_toTopOf="parent"
@@ -130,7 +139,7 @@
                             android:layout_marginEnd="16dp"
                             android:drawableTint="@color/white"
                             android:fontFamily="@font/pmedium"
-                            android:gravity="center_vertical"
+                            android:gravity="bottom"
                             android:text="Solo trip"
                             android:textColor="@color/white"
                             android:textSize="12dp"
@@ -192,7 +201,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/msemibold"
                 android:gravity="center"
-                android:text="₹3000"
+                android:text="₹4610"
                 android:textColor="@color/primary"
                 android:textSize="40dp"
                 />
@@ -215,7 +224,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/msemibold"
                 android:gravity="center"
-                android:text="₹5000"
+                android:text="₹8320"
                 android:textColor="@color/low_emphasis"
                 android:textSize="40dp"
                 android:layout_weight="4.5"
@@ -311,7 +320,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pmedium"
                     android:gravity="center_vertical"
-                    android:text="Rs. 1050"
+                    android:text="Rs.2550"
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/low_emphasis"
                     android:textSize="16dp"
@@ -339,7 +348,6 @@
                     android:textColor="@color/low_emphasis"
                     android:drawableTint="@color/low_emphasis"
                     android:textSize="16dp"
-
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -351,7 +359,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pmedium"
                     android:gravity="center_vertical"
-                    android:text="Rs. 1050"
+                    android:text="Rs. 1510"
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/low_emphasis"
                     android:textSize="16dp"
@@ -391,7 +399,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pmedium"
                     android:gravity="center_vertical"
-                    android:text="Rs. 1050"
+                    android:text="Rs. 500"
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/low_emphasis"
                     android:textSize="16dp"
@@ -431,7 +439,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pmedium"
                     android:gravity="center_vertical"
-                    android:text="5x"
+                    android:text="1x"
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/low_emphasis"
                     android:textSize="16dp"
@@ -478,7 +486,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/pmedium"
                     android:gravity="center_vertical"
-                    android:text="Rs. 1050"
+                    android:text="Rs. 4610"
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/low_emphasis"
                     android:textSize="16dp"
@@ -495,6 +503,7 @@
 
 
         <include
+            android:id="@+id/de"
             layout="@layout/detailedview"
             />
 
