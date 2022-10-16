@@ -6,7 +6,7 @@
     android:padding="14dp"
     android:text="Solo"
     android:gravity="start"
-    android:textColor="@color/black"
+    android:textColor="@color/primary_less"
     android:textStyle="bold"
     android:fontFamily="@font/msemibold"
  />

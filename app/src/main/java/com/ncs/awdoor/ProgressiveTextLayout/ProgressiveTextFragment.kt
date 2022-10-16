@@ -1,6 +1,7 @@
  package com.ncs.awdoor.ProgressiveTextLayout
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -13,13 +14,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.ncs.awdoor.FinalActivity
 import com.ncs.awdoor.R
 import com.ncs.awdoor.databinding.FragmentProgressiveTextBinding
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.properties.Delegates
 
- class ProgressiveTextFragment : Fragment() {
+ class ProgressiveTextFragment : Fragment(), View.OnClickListener {
 
     companion object {
         fun newInstance() = ProgressiveTextFragment()
@@ -36,6 +38,7 @@ import kotlin.properties.Delegates
      var tripType : Int = -1
      var transport : Int = -1
      var willing : Int = -1
+     var stars : Int = -1
      lateinit var noOfpeople : String
 
 
@@ -45,6 +48,10 @@ import kotlin.properties.Delegates
     ): View {
 
         _binding = FragmentProgressiveTextBinding.inflate(inflater,container,false)
+
+
+        binding.next.setOnClickListener(this)
+
 
         val languages = resources.getStringArray(R.array.triptype)
         arrayAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item , languages)
@@ -99,6 +106,11 @@ import kotlin.properties.Delegates
         val starAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item , star)
         val starView =binding.hotelstars
         starView.setAdapter(starAdapter)
+
+        starView.setOnItemClickListener{
+                adapterView, view, i, l ->
+                stars = l.toInt()
+        }
 
 
         val datePicker =
@@ -205,7 +217,7 @@ import kotlin.properties.Delegates
          binding.b.p3.setImageResource(R.drawable.ic_se)
          binding.b.l3.setBackgroundColor(resources.getColor(R.color.primary))
          binding.b.p4.setImageResource(R.drawable.ic_do)
-         binding.autoCompleteTextView.alpha = 0.5f
+         binding.detail3.alpha = 0.5f
          if (trip == 1){
             binding.detail45.alpha = 0.5f
         }
@@ -227,27 +239,44 @@ import kotlin.properties.Delegates
          binding.detail5.visibility = View.VISIBLE
          if (willing!= -1){
                 if (willing == 0){
-                    showStars(willing)
+                    showStars()
                 }else {
+                    binding.detail5.alpha = 0.5f
+                    binding.detail6.alpha = 0.5f
                     binding.b.p5.setImageResource(R.drawable.ic_se)
+                    next()
                 }
          }else {
              Toast.makeText(requireContext(),"Will you stay in hotel ? ", Toast.LENGTH_SHORT).show()
          }
      }
-     fun showStars(willing : Int){
+     fun showStars(){
          binding.detail6.visibility =View.VISIBLE
+
+         if (stars!=-1){
+             binding.detail5.alpha = 0.5f
+             binding.detail6.alpha = 0.5f
+             binding.b.p5.setImageResource(R.drawable.ic_se)
+             next()
+         }else {
+             Toast.makeText(requireContext(),"Hotel stars ? ", Toast.LENGTH_SHORT).show()
+         }
+
+     }
+
+     fun next(){
+         binding.next.visibility = View.GONE
+         binding.nextintent.visibility = View.VISIBLE
 
      }
 
      override fun onAttach(context: Context) {
          super.onAttach(context)
          viewModel = ViewModelProvider(this).get(ProgressiveTextViewModel::class.java)
-
-
-
-
-
      }
 
-}
+     override fun onClick(p0: View?) {
+         startActivity(Intent(context, FinalActivity::class.java ))
+     }
+
+ }

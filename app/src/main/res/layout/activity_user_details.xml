@@ -133,7 +133,7 @@
         android:fontFamily="@font/pmedium"
         android:text="Begin"
         android:textAllCaps="false"
-        android:textColor="@color/high_emphasis"
+        android:textColor="@color/white"
 
         android:textSize="18dp" />
 

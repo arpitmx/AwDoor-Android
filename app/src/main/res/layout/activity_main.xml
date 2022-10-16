@@ -86,7 +86,7 @@
         android:layout_weight="0.8"
         android:text="Let's Go"
         android:layout_margin="5dp"
-        android:textColor="@color/high_emphasis"
+        android:textColor="@color/white"
         android:textSize="18dp"
         android:transitionName="searchActivityTransition"
         android:fontFamily="@font/pmedium"
